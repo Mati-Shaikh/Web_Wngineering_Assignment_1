@@ -70,7 +70,7 @@
   <div class="job-listings"></div>
 
   <!-- Add Job button to show the modal -->
-  <button id="add-job-button" style="color: white; font-family: 'League Spartan', sans-serif; position: fixed; bottom: 20px; right: 20px; border-radius: 30px; height: 50px; width: 50px; background-color: none; font-size: 25px; border: none;">+</button>
+  <button id="add-job-button" style="color: rgb(255, 255, 255); font-family: 'League Spartan', sans-serif; position: fixed; bottom: 20px; right: 20px; border-radius: 30px; height: 50px; width: 50px; background-color: none; font-size: 25px; border: none;">+</button>
 
 
   <!-- Modal for adding a new job -->
@@ -97,7 +97,12 @@
   </select><br>
   <select id="job-logo" style="margin-top: 5px;" class="styled-select">
     <option value="./images/eyecam-co.svg">Eyecam Co</option>
-    <option value="./images/eyecam-co.svg">Eyecam Co</option>
+    <option value="./images/manage.svg">Manage</option>
+    <option value="./images/faceit.svg">FaceIt</option>
+    <option value="./images/insure.svg">Insure</option>
+    <option value="./images/myhome.svg">MyHome</option>
+    <option value="./images/photosnap.svg">Photosnap</option>
+    <option value="./images/shortly.svg">Shortly</option>
     <!-- Add other logo options here -->
   </select>
   <input type="text" id="job-skills" placeholder="Skills (comma-separated)" class="styled-input" style="margin-top: 5px;">
@@ -298,9 +303,6 @@ $("#cancel-job").click(function () {
 });
 
 // Handle job submission
-// Handle job submission
-// Handle job submission
-// Handle job submission
 $("#submit-job").click(function () {
 // Get user input for the new job
 var jobTitle = $("#job-title").val();
@@ -312,7 +314,7 @@ var jobSkills = $("#job-skills").val().split(',');
 var jobCompany = $("#job-company").val(); // Get the selected company
 
 // Set the "postedAt" value to your desired value (e.g., "2d ago")
-var postedAt = "2d ago";
+var postedAt = "1min ago";
 
 // Create a new job listing object
 var newJobListing = {
@@ -346,7 +348,7 @@ displayJobListings(jobListings);
 $("#job-title").val("");
 $("#job-location").val("");
 $("#job-type").val("Full Time");
-$("#job-logo").val("../Assignment-1 Starter Code/images/eyecam-co.svg");
+$("#job-logo").val("./images/eyecam-co.svg");
 $("#job-description").val("");
 $("#job-skills").val("");
 $("#job-company").val("Photosnap"); // Set a default company
