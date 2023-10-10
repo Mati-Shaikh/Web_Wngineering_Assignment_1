@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./jquery.js"></script>
+  <title>Frontend Mentor | Job Listings</title>
+</head>
+
+<body>
+  <div class="nav_background">
+    <nav>
+      <div class="background_img">
+        <img src="../Assignment-1 Starter Code/images/bg-header-desktop.svg" alt=""
+          style="display: grid; height: 120px; width: 100%;">
+      </div>
+    </nav>
+  </div>
+
+  <!-- Add a dropdown for positions -->
+  <div class="filteration">
+    <label for="position-filter">Position:</label>
+    <select id="position-filter">
+        <option value="">All Positions</option>
+    </select>
+
+    <label for="role-filter" style="margin-left: 8px;">Role:</label>
+    <select id="role-filter">
+        <option value="">All Roles</option>
+        <option value="Frontend">Frontend</option>
+        <option value="Backend">Backend</option>
+        <option value="Fullstack">Fullstack</option>
+    </select>
+
+    <label for="level-filter" style="margin-left: 8px;">Level:</label>
+    <select id="level-filter">
+        <option value="">All Levels</option>
+        <option value="Junior">Junior</option>
+        <option value="Midweight">Midweight</option>
+        <option value="Senior">Senior</option>
+    </select>
+
+    <label for="language-filter" style="margin-left: 8px;">Language:</label>
+    <select id="language-filter">
+        <option value="">All Languages</option>
+        <option value="Python">Python</option>
+        <option value="Ruby">Ruby</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+    </select>
+
+    <label for="tools-filter" style="margin-left: 8px;">Tools:</label>
+    <select id="tools-filter" style="width: 133px;">
+        <option value="">All Tools</option>
+        <option value="React">React</option>
+        <option value="Sass">Sass</option>
+        <option value="Vue">Vue</option>
+        <option value="Django">Django</option>
+        <option value="RoR">RoR (Ruby on Rails)</option>
+    </select>
+</div>
+
+  <!-- Place the job listings container here -->
+  <div class="job-listings"></div>
+
+  <!-- Add Job button to show the modal -->
+  <button id="add-job-button" style="color: black; font-family: 'League Spartan', sans-serif; position: fixed; bottom: 20px; right: 20px;">Add Job (+)</button>
+
+
+  <!-- Modal for adding a new job -->
+  <!-- Add classes to input fields and buttons -->
+  <!-- Modal for adding a new job -->
+<!-- Modal for adding a new job -->
+<div id="add-job-modal" class="popup styled-modal">
+  <div class="nav_background_popup">
+    <nav>
+      <div class="background_img">
+        <img src="../Assignment-1 Starter Code/images/bg-header-desktop.svg" alt=""
+          style="display: grid; height: 70px; padding: 0%; margin: 0%; background-color: rgb(87, 156, 153); margin-bottom: 30px; width: 270px;">
+      </div>
+    </nav>
+  </div>
+  <h2 style="margin-bottom: 20px;">Add a New Job</h2>
+  <label for="job-company">Company:</label><br>
+  <select id="job-company" style="margin-top: 15px;" class="styled-select">
+    <option value="Photosnap">Photosnap</option>
+    <option value="Manage">Manage</option>
+    <option value="Account">Account</option>
+    <option value="MyHome">MyHome</option>
+    <!-- Add other company options here -->
+  </select><br><br>
+  <input type="text" id="job-title" placeholder="Job Title" class="styled-input"><br>
+  <input type="text" id="job-location" placeholder="Location" class="styled-input"><br>
+  <label for="job-type">Job Type:</label><br>
+  <select id="job-type" style="margin-top: 15px;" class="styled-select">
+    <option value="Full Time">Full Time</option>
+    <option value="Part Time">Part Time</option>
+    <option value="Remote">Remote</option>
+  </select><br><br>
+  <label for="job-logo">Logo:</label><br>
+  <select id="job-logo" style="margin-top: 15px;" class="styled-select">
+    <option value="../Assignment-1 Starter Code/images/eyecam-co.svg">Eyecam Co</option>
+    <option value="../Assignment-1 Starter Code/images/eyecam-co.svg">Eyecam Co</option>
+    <!-- Add other logo options here -->
+  </select><br><br>
+  <input type="text" id="job-description" placeholder="Job Description" class="styled-input"><br>
+  <input type="text" id="job-skills" placeholder="Skills (comma-separated)" class="styled-input"><br>
+  <button id="submit-job" class="styled-button">Submit</button>
+  <button id="cancel-job" class="styled-button">Cancel</button>
+</div>
+
+
+
+  
+
+  <div class="job-details styled-modal">
+    <h2>Job Details</h2>
+    <p><strong>Company:</strong> <span id="company-name"></span></p>
+    <p><strong>Position:</strong> <span id="position"></span></p>
+    <p><strong>Role:</strong> <span id="role"></span></p>
+    <p><strong>Level:</strong> <span id="level"></span></p>
+    <p><strong>Posted At:</strong> <span id="posted-at"></span></p>
+    <p><strong>Contract:</strong> <span id="contract"></span></p>
+    <p><strong>Location:</strong> <span id="location"></span></p>
+    <p><strong>Languages:</strong> <span id="languages"></span></p>
+    <p><strong>Tools:</strong> <span id="tools"></span></p>
+    <button id="clear-job" class="styled-button">Clear</button>
+    <button id="close-details" class="styled-button">Close</button>
+  </div>
+
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">M Mati Ur Rehman</a>.
+  </div>
+</body>
+
+</html>

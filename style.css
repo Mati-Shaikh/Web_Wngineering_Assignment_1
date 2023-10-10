@@ -1,0 +1,566 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body{
+    background-color: rgb(211, 232, 232);
+}
+
+.nav_background{
+    padding: 0px;
+    margin: 0px;
+    background-color:rgb(87, 156, 153);
+
+}
+.grid_container2{
+    background-color: rgb(245, 243, 243);
+    display: flex;
+    height: 100px;
+    width: 80%;
+    border-radius: 8px;
+    margin-top: 8px;
+    
+}
+.job_img{
+    display: flex ;
+    height: 80px;
+    width: 100px;
+    margin:5px;
+}
+
+.grid_container2:hover{
+    background-color: rgb(202, 204, 205);
+}
+.hovered-border {
+    border-left: 4px solid #ff5733; 
+    transition: border-left-color 0.3s ease; 
+  }
+  
+  
+  .grid_container2:hover {
+    cursor:grab; 
+   
+    border-left: 4px solid rgb(87, 156, 153); 
+  }
+  
+.links{
+    margin-left: 50%; 
+    height: 30px; 
+    display: flex; 
+    padding-top: 30px;
+    border-color:none;
+    border-radius: 3px;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.button_style{
+    margin-right: 10px;
+    background-color:rgb(164, 199, 197);
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    height: 30px;
+    width: 65px;
+}
+
+.links :hover{
+background-color: rgb(217, 222, 221);
+}
+.contents{
+    height: 20%;
+    width: 100%;
+    font-family: 'League Spartan', sans-serif;
+    margin-top: 15px;
+}
+
+.clear-button {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: #333; 
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  }
+  
+  .clear-button:hover {
+    background-color: #fff; 
+    border-color: #333; 
+    color: #333; 
+  }
+
+  #add-job-button{
+    height: 40px; 
+    width: 100px; 
+    border-radius:10px; 
+    text-decoration: none; 
+    background-color:rgb(164, 199, 197); 
+    font-size: 15px; 
+    font-family:Arial, Helvetica, sans-serif; 
+    margin-left: 81%; 
+    margin-top: 15px; 
+    border-color:rgb(211, 232, 232);
+    color: rgb(86, 156, 153);
+  }
+
+  #add-job-button:hover{
+    background-color: rgb(217, 222, 221);
+  }
+  
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(184, 35%, 42%);
+  }
+
+  /* Style for the modal */
+  .job-details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    z-index: 1000;
+    max-width: 400px;
+    text-align: left;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  #add-job-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .job-details-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    z-index: 1000;
+    max-width: 400px;
+    text-align: left;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .grid_container2.open .job-details {
+    display: block;
+  }
+  .job-listings{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .job-details h2 {
+    margin-top: 0;
+  }
+
+  .job-details p {
+    margin: 10px 0;
+  }
+
+  .job-details button {
+    margin-right: 10px;
+  }
+
+  
+.styled-input {
+  margin-bottom: 5px;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+.styled-select {
+  width: 85%;
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.styled-button {
+  background-color: rgb(164, 199, 197);
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  height: 30px;
+  width: 65px;
+  margin: 8px 10px;
+  color: white;
+}
+
+.styled-button:hover {
+  background-color: #4caf50; 
+}
+
+.styled-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  z-index: 1000;
+  max-width: 400px;
+  text-align: left;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; 
+}
+
+.styled-input {
+  margin-right: 80px;
+  height: 30%;
+  width: 50%;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 3px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.styled-select {
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 3px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.styled-button {
+  margin-top: 8px;
+  margin-right: 10px;
+  background-color: rgb(164, 199, 197);
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  height: 30px;
+  width: 80px;
+  margin-left: 30%;
+  margin-top: 20px;
+}
+.job-filter {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  z-index: 1; 
+}
+
+
+.job-filter select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.job-filter button {
+  background-color: #007a5a; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
+.job-filter button:hover {
+  background-color: #005541; 
+}
+
+
+.filteration {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 70%;
+  height: 20px;
+  margin-left: 10%;
+  padding-bottom: 1%;
+}
+
+.filteration label {
+  font-size: 15px;
+  font-family: 'League Spartan', sans-serif;
+  color: #333; 
+  width: 10%;
+}
+
+
+.filteration select {
+
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff; 
+  outline: none;
+  cursor: pointer;
+}
+
+
+.filteration select option {
+  font-size: 16px;
+}
+
+.filteration select:focus {
+  border-color: #007a5a; 
+  box-shadow: 0 0 5px rgba(0, 122, 90, 0.5); 
+}
+
+/* Common styles for both mobile and desktop */
+.nav_background {
+  /* Common background styles here */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1208px) {
+  body{
+    margin: 0%;
+    padding: 0%;
+  }
+ 
+  .nav_background img {
+    height: 80px; 
+    width:100%;
+  }
+  
+  .filteration {
+    /* Adjust filteration styles for mobile */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 133px;
+  }
+  .grid_container2{
+    display:table;
+    width: 70%;
+  }
+  .job_img{
+    display: flex;
+    margin-bottom: 20px;
+
+  }
+  .links{
+    margin-left: 20px;
+    margin-bottom: 25px;
+    white-space: normal;
+  }
+  .contents{
+    margin-left: 20px;
+    margin-top: 60px;
+  }
+
+  .filteration select{
+    margin-bottom: 18px;
+  }
+
+  .filteration label{
+    margin-right: 20px;
+  }
+
+}
+
+
+
+@media (max-width: 500px) {
+  body{
+    margin: 0%;
+    padding: 0%;
+  }
+ 
+  .nav_background img {
+    height: 80px;
+    width:100%;
+  }
+  .job-listings{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .filteration {
+
+    display: grid;
+    flex-direction: row;
+    margin-bottom: 310px;
+  }
+  .grid_container2{
+    position: relative;
+    display:table;
+    width: 80%;
+    margin-bottom: 50px;
+  }
+  .job_img{
+    display: flex;
+    margin-bottom: 20px;
+
+  }
+  .links{
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    white-space: normal;
+  }
+  .contents{
+    position: relative;
+    margin-left: 20px;
+    white-space: normal;
+    margin-top: 60px;
+  }
+
+
+  .nav_background {
+    background-image: url('./images/bg-header-mobile.svg');
+    padding: 0px;
+    margin: 0px;
+    background-color:rgb(87, 156, 153);
+  }
+  .job_img{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 30px;
+    size: 20%; 
+  }
+
+  .filteration select{
+    margin-bottom: 8px;
+  }
+
+  .filteration label{
+    margin-right: 20px;
+  }
+
+}
+.tag_featured{
+  size: 20px;
+  font-size: 12px;
+}
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.new {
+  background-color: #3DB193;
+  color: white;
+  /* Adjust the font size for "New" */
+  font-size: 10px; /* You can change the size to your preference */
+}
+
+.featured {
+  background-color: #5CA6A6;
+  color: white;
+  /* Adjust the font size for "Featured" */
+  font-size: 10px; /* You can change the size to your preference */
+}
+
+
+@media (max-width: 375px) {
+ 
+  .background_img{
+    background-image: url('./images/bg-header-mobile.svg');
+    width: 100%;
+
+  }
+  
+  .filteration {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+  }
+  .grid_container2{
+    position: relative;
+    display:table;
+    width: 80%;
+    margin-bottom: 50px;
+  }
+  .job_img{
+    display: flex;
+    margin-bottom: 20px;
+
+  }
+  .links{
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    white-space: normal;
+  }
+  .contents{
+    position: relative;
+    margin-left: 20px;
+    white-space: normal;
+    margin-top: 60px;
+  }
+
+
+  .nav_background {
+    padding: 0px;
+    margin: 0px;
+    background-color:rgb(87, 156, 153);
+  }
+  .job_img{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 30px;
+    size: 20%; 
+  }
+
+  .filteration select{
+    margin-bottom: 8px;
+  }
+
+  .filteration label{
+    margin-right: 20px;
+  }
+  
+
+}
